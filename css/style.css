@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap');
+
+
+/*======== Using Css Custom Variables =========*/
+
+body.dark {
+    --bg-color1: #0b0f19;
+    --bg-color2: #1c1e2a;
+    --color1: #FFF;
+    --color2: #DDD;
+}
+
+body:not(.dark) {
+    --bg-color1: #fbfdff;
+    --bg-color2: #eaeae9;
+    --color1: #3e4455;
+    --color2: #000;
+}
+
+/*======= Universal CSS Properties =======*/
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    outline: none;
+}
+
+li {
+    list-style: none;
+}
+
+h1 {
+    font-size: 3rem;
+    color: var(--color1);
+    font-weight: 800;
+}
+
+p {
+    color: var(--color1);
+}
+
+p strong {
+    font-weight: 600;
+    color: var(--color1);
+}
+
+img {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ========== Dark And Light Mode Toggle ======== */
+
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    z-index: 10;
+    right: 0;
+    border: none;
+    background-color: var(--color2);
+}
+
+body:not(.dark) .theme-toggle .lni-night,
+body.dark .theme-toggle .lni-sun {
+    cursor: pointer;
+    color: var(--bg-color2);
+    padding: 10px 10px;
+    display: block;
+    font-size: 1.25rem;
+}
+
+body:not(.dark) .theme-toggle .lni-sun {
+    display: none;
+
+}
+
+body.dark .theme-toggle .lni-night {
+    display: none;
+}
+
+/* ======= Wraper ======== */
+
+
+
+
+/*========== Styling Navigation Bar ========*/
+
+
+
+/*========== Responsive Navigation Menu =======*/
+
+
+
+
+
+/* ========= Style For About Section ======== */
+
+
+
+
+
+/*========== Heading Tag Hover Effect =========*/
+
+.text-wrap {
+    position: relative;
+    display: inline-flex;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.main-title {
+    -webkit-text-stroke: 1px var(--color1);
+    -webkit-text-fill-color: transparent;
+}
+
+.main-title,
+.hover-title {
+    transition: .5s cubic-bezier(0.51, 0.57, 0.17, 1);
+}
+
+.hover-title {
+    color: var(--color1);
+    position: absolute;
+    transform: translate3d(0, 100%, 0);
+}
+
+.text-wrap:hover .main-title {
+    transform: translate3d(0, -100%, 0);
+    transition-delay: 0.1s;
+}
+
+.text-wrap:hover .hover-title {
+    transform: translate3d(0, 0, 0);
+}
+
+/*=========== Style For About Image ==========*/
+
+
+
+
+/* ------ Contact Section Style ------- */
+
+
+/* ====== Subtitle ========= */
+
+.subtitle {
+    position: relative;
+    color: var(--color1);
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding-left: 55px;
+}
+
+.subtitle::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 35px;
+    height: 3px;
+    background-color: var(--color1);
+}
+
+
+/* ----- Footer contact form -------- */
+
+
+
+/* ======= Message following form submission: error or success ======== */
+
+.loader {
+    width: 100%;
+    padding: 10px;
+    background-color: var(--bg-color1);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.loader.show {
+    display: block;
+}
+
+.loader i {
+    color: var(--color2);
+    animation: rotateme .4s linear infinite;
+}
+
+.form-message {
+    width: 100%;
+    background-color: var(--bg-color1);
+    margin-top: 10px;
+    text-align: center;
+    font-weight: 600;
+    display: none;
+}
+
+.form-message.show {
+    display: block;
+}
+
+.success-msg {
+    color: green;
+    line-height: 3;
+}
+
+.error-msg {
+    color: red;
+    line-height: 3;
+}
+
+/* ---- loader animation ----- */
+
+@keyframes rotateme {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* ========= Main Footer ========= */
+
+
+/*---------------- Large devices (desktops, 992px and up)  -----------*/
+
+@media (min-width: 768px) {
+
+    /*======= Responsive Universal CSS Properties =======*/
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    /*========= Header Responsive ===========*/
+
+
+    /*========= About Section Responsive =========*/
+
+
+    /*========= About Image Responsive ========*/
+
+
+
+    /*========== Theme Toggle Icon ========*/
+
+    .theme-toggle {
+        background: none;
+        position: static;
+        transform: none;
+    }
+
+    body:not(.dark) .theme-toggle .lni-night,
+    body.dark .theme-toggle .lni-sun {
+        color: var(--color2);
+    }
+
+    /* ----- Contact responsive ------ */
+
+
+
+
+}
