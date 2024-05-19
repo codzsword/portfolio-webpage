@@ -92,24 +92,95 @@ body.dark .theme-toggle .lni-night {
 
 /* ======= Wraper ======== */
 
+.portfolio-container {
+    max-width: 1070px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
 
-
+.portfolio-row {
+    display: flex;
+    flex-wrap: wrap;
+}
 
 /*========== Styling Navigation Bar ========*/
 
+header {
+    left: 0px;
+    right: 0px;
+    z-index: 20;
+    transition: .8s;
+    padding: 15px;
+    position: fixed;
+    background-color: var(--bg-color1);
+}
 
+header .portfolio-row.header-wrap {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.portfolio-navbar {
+    display: none;
+}
+
+.brand-name a {
+    font-size: 1.25rem;
+    font-weight: 300;
+    color: var(--color1);
+}
+
+.navbar-toggle i {
+    font-size: 1.25rem;
+    line-height: 30px;
+    cursor: pointer;
+    color: var(--color1);
+}
 
 /*========== Responsive Navigation Menu =======*/
 
+.portfolio-navbar.show {
+    display: block;
+    position: absolute;
+    background-color: rgb(236, 241, 250);
+    width: 100%;
+    left: 0px;
+    top: 60px;
+    padding: 15px;
+    border-top: 5px solid #000;
+    text-align: center;
+}
 
-
-
+.portfolio-navbar ul li a {
+    color: #000;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 0.9rem;
+    line-height: 50px;
+}
 
 /* ========= Style For About Section ======== */
 
+#about {
+    padding-top: 100px;
+    background-color: var(--bg-color1);
+}
 
+.about-content {
+    align-items: center;
+}
 
+.about-intro {
+    margin: 3rem 0;
+    width: 100%;
+    order: 2;
+    text-align: center;
+}
 
+.about-text h3 {
+    color: var(--color1);
+    margin-bottom: 10px;
+}
 
 /*========== Heading Tag Hover Effect =========*/
 
@@ -147,11 +218,65 @@ body.dark .theme-toggle .lni-night {
 
 /*=========== Style For About Image ==========*/
 
+.about-image {
+    width: 100%;
+    order: 1;
+    position: relative;
+    z-index: 2;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
 
+.about-image img {
+    border-radius: 50%;
+}
 
+.about-image::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background-image: linear-gradient(11deg, #6ec1e4 0%, #1F3354 100%);
+    z-index: -1;
+    transition: all .5s ease-in-out;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 30px rgba(130, 237, 255, 0.4));
+    box-shadow: 2px 10px 0px 0px rgba(216, 19, 19, 0.16);
+    opacity: 0.7;
+}
+
+.about-image:hover {
+    transform: translateY(-10.5px);
+}
+
+.about-image:hover::before {
+    filter: drop-shadow(0 0 30px rgba(130, 237, 255, 0.97));
+}
 
 /* ------ Contact Section Style ------- */
 
+#contact {
+    padding: 60px 0;
+    background-color: var(--bg-color2);
+}
+
+#contact .portfolio-row {
+    align-items: center;
+}
+
+#contact ul {
+    margin-top: 3rem;
+}
+
+#contact form {
+    margin-top: 2rem;
+}
+
+.contact-info {
+    width: 100%;
+    padding-top: 45px;
+    order: 2;
+}
 
 /* ====== Subtitle ========= */
 
@@ -175,10 +300,90 @@ body.dark .theme-toggle .lni-night {
     background-color: var(--color1);
 }
 
+.contact-info li {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem !important;
+    cursor: pointer;
+}
+
+.contact-icon {
+    margin: auto 0;
+}
+
+.contact-icon i {
+    color: var(--color1);
+    display: inline-block;
+    margin-right: 30px;
+    font-size: 1.5rem;
+}
+
+.contact-detail h5 {
+    color: var(--color1);
+    font-size: 1.025rem;
+    font-weight: 800;
+}
+
+.contact-detail span {
+    color: var(--color1);
+}
 
 /* ----- Footer contact form -------- */
 
+.footer-contact {
+    width: 100%;
+    padding-top: 15px;
+}
 
+.input-wrapper,
+.input-subject,
+.form-submit {
+    width: 100%;
+    padding: 10px 0;
+}
+
+.input-control,
+.contact-msg {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    background-color: #f6f6f9;
+    border: 1px solid #f6f6f9;
+    color: #3e4455;
+    line-height: 45px;
+    outline: none;
+    padding: 0 30px;
+    width: 100%;
+    font-weight: 500;
+}
+
+.contact-msg {
+    height: 120px;
+    line-height: 1.2;
+    padding: 20px 30px;
+    resize: none;
+}
+
+.footer-contact label {
+    color: var(--color1);
+    margin-bottom: .5rem;
+    display: inline-block;
+}
+
+.footer-contact label span {
+    color: #C0303E;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px 30px;
+    font-weight: 800;
+    color: #FFF;
+    font-family: 'Poppins', sans-serif;
+    background-color: #293b5f;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
 
 /* ======= Message following form submission: error or success ======== */
 
@@ -236,8 +441,35 @@ body.dark .theme-toggle .lni-night {
     }
 }
 
-/* ========= Main Footer ========= */
+/* footer */
 
+footer {
+    background-color: var(--bg-color1);
+    padding: 20px 0;
+}
+
+.portfolio-row.footer-wrap {
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright-text {
+    display: none;
+}
+
+.social-icons li:not(:last-child) {
+    margin-right: 0.5rem;
+    border-right: 1px solid var(--color2);
+    padding-right: 0.7rem;
+}
+
+.social-icons li {
+    display: inline-block;
+}
+
+.social-icons li a {
+    color: var(--color1);
+}
 
 /*---------------- Large devices (desktops, 992px and up)  -----------*/
 
@@ -251,13 +483,53 @@ body.dark .theme-toggle .lni-night {
 
     /*========= Header Responsive ===========*/
 
+    header {
+        background-color: transparent;
+        position: absolute;
+        padding: 0px 15px;
+    }
+
+    .navbar-toggle i {
+        display: none;
+    }
+
+    .portfolio-navbar {
+        display: block;
+    }
+
+    .portfolio-navbar ul li {
+        display: inline-block;
+        padding: 0 10px;
+    }
+
+    .portfolio-navbar ul li a {
+        color: var(--color1);
+        line-height: 65px;
+    }
 
     /*========= About Section Responsive =========*/
 
+    #about {
+        padding: 175px 0 150px 0;
+    }
+
+    .about-intro {
+        width: 60%;
+        margin: 0;
+        order: 1;
+        text-align: unset;
+    }
+
+    .about-intro p {
+        padding-right: 16%;
+    }
 
     /*========= About Image Responsive ========*/
 
-
+    .about-image {
+        width: 40%;
+        order: 2;
+    }
 
     /*========== Theme Toggle Icon ========*/
 
@@ -274,7 +546,38 @@ body.dark .theme-toggle .lni-night {
 
     /* ----- Contact responsive ------ */
 
+    .contact-info {
+        order: 1;
+        width: 35%;
+        padding-top: 15px;
+    }
 
+    .footer-contact {
+        order: 2;
+        width: 65%;
+        padding-left: 40px;
+    }
 
+    .input-wrapper {
+        padding: 0 10px;
+        width: 50%;
+        margin-bottom: 10px;
+    }
 
+    .input-subject,
+    .form-submit {
+        padding: 10px;
+    }
+
+    /* ====== Footer Responsive ========= */
+
+    .portfolio-row.footer-wrap {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .copyright-text {
+        display: block;
+    }
 }
