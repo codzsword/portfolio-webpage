@@ -9,91 +9,163 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="dark">
     <!--------- Header Begins -------->
     <header>
-
-        <!----------------- Header Navigation Begins --------------->
-        <div class="portfolio-navbar">
-
-        </div>
-        <!------ Header Navigation Ends ----------->
-        <div class="navbar-toggle">
-            <i class="lni lni-grid-alt"></i>
-        </div>
-        <button type="button" class="theme-toggle">
-            <i class="lni lni-night"></i>
-            <i class="lni lni-sun"></i>
-        </button>
-        </div>
+        <div class="portfolio-container">
+            <div class="portfolio-row header-wrap">
+                <div class="brand-name">
+                    <a href="#" class="logo">Jane Doe</a>
+                </div>
+                <!----------------- Header Navigation Begins --------------->
+                <div class="portfolio-navbar">
+                    <ul>
+                        <li><a class="navbar-link" href="#about">Home</a></li>
+                        <li><a class="navbar-link" href="#resume">resume</a></li>
+                        <li><a class="navbar-link" href="#services">Services</a></li>
+                        <li><a class="navbar-link" href="#projects">projects</a></li>
+                        <li><a class="navbar-link" href="#contact">contact</a></li>
+                    </ul>
+                </div>
+                <!------ Header Navigation Ends ----------->
+                <div class="navbar-toggle">
+                    <i class="lni lni-grid-alt"></i>
+                </div>
+                <button type="button" class="theme-toggle">
+                    <i class="lni lni-night"></i>
+                    <i class="lni lni-sun"></i>
+                </button>
+            </div>
         </div>
     </header>
     <!--------- Header Ends -------->
 
     <!--------- About Section Begins --------->
     <section id="about">
-
-        <!------ Greetings and Introduction Begins ------>
-        <div class="about-intro">
-
+        <div class="portfolio-container">
+            <div class="portfolio-row about-content">
+                <!------ Greetings and Introduction Begins ------>
+                <div class="about-intro">
+                    <div class="about-text">
+                        <h1>👋 Hey there, <br />
+                            It’s
+                            <span class="text-wrap">
+                                <span class="main-title">David</span>
+                                <span class="hover-title">David</span>
+                            </span>
+                        </h1>
+                        <h3>User Interface Designer</h3>
+                        <p>Hey are looking for designer to build your <strong>Brand and gorw your business
+                                ?</strong> let's shake
+                            hands with me.</p>
+                    </div>
+                </div>
+                <!------ Greetings and Introduction Ends ------>
+                <div class="about-image">
+                    <img src="image/profile.png" alt="profile">
+                </div>
+            </div>
         </div>
-        <!------ Greetings and Introduction Ends ------>
-        <div class="about-image">
-
-        </div>
-
     </section>
     <!------- About Section Ends ------->
 
     <!------- Contact Section Begins ------->
     <section id="contact">
+        <div class="portfolio-container">
+            <div class="portfolio-row">
 
-
-        <!-------- Contact Information Begins ------->
-        <div class="contact-info">
-            <ul>
-
-            </ul>
-        </div>
-        <!-------- Contact Information Ends ------->
-
-        <!-------- Contact Form Begins ------->
-        <div class="footer-contact">
-            <form action="#" method="post" id="contact-form">
-                <div class="portfolio-row">
-                    <div class="input-wrapper">
-                        <label for="name">First Name <span>*</span></label>
-                        <input type="text" name="fname" placeholder="Enter your name" class="input-control">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="name">Last Name <span>*</span></label>
-                        <input type="email" name="lname" placeholder="Enter your email" class="input-control">
-                    </div>
-                    <div class="input-subject">
-                        <label for="name">Email <span>*</span></label>
-                        <input type="email" name="email" placeholder="Enter your email" class="input-control">
-                    </div>
-                    <div class="input-subject">
-                        <label for="name">Message <span>*</span></label>
-                        <textarea name="message" rows="9" placeholder="Your Message" class="contact-msg"></textarea>
-                    </div>
+                <!-------- Contact Information Begins ------->
+                <div class="contact-info">
+                    <span class="subtitle">
+                        Contact Information
+                    </span>
+                    <ul>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="lni lni-phone"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h5>Phone</h5>
+                                <span>+1 (359) 936-8944
+                                </span>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="lni lni-envelope"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h5>Email</h5>
+                                <span>david@example.com</span>
+                            </div>
+                        </li>
+                        <li class="contact-item">
+                            <div class="contact-icon">
+                                <i class="lni lni-map-marker"></i>
+                            </div>
+                            <div class="contact-detail">
+                                <h5>Address</h5>
+                                <span>7462 Mitchell Plaza, Kirstieshire
+                                </span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
-                <div class="form-submit">
-                    <button type="submit" class="btn-submit">Send Message</button>
-                    <div class="loader">
-                        <i class="lni lni-spinner-solid"></i>
-                    </div>
-                    <div class="form-message"></div>
-                </div>
-            </form>
-        </div>
-        <!-------- Contact Form Ends ------->
+                <!-------- Contact Information Ends ------->
 
+                <!-------- Contact Form Begins ------->
+                <div class="footer-contact">
+                    <span class="subtitle">
+                        Leave a Message
+                    </span>
+                    <form action="#" method="post" id="contact-form">
+                        <div class="portfolio-row">
+                            <div class="input-wrapper">
+                                <label for="name">First Name <span>*</span></label>
+                                <input type="text" name="name" placeholder="Enter your name" class="input-control">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="name">Last Name <span>*</span></label>
+                                <input type="email" name="email" placeholder="Enter your email" class="input-control">
+                            </div>
+                            <div class="input-subject">
+                                <label for="name">Email <span>*</span></label>
+                                <input type="email" name="subject" placeholder="Enter your email" class="input-control">
+                            </div>
+                            <div class="input-subject">
+                                <label for="name">Message <span>*</span></label>
+                                <textarea name="message" rows="9" placeholder="Your Message"
+                                    class="contact-msg"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-submit">
+                            <button type="submit" class="btn-submit">Send Message</button>
+                            <div class="loader">
+                                <i class="lni lni-spinner-solid"></i>
+                            </div>
+                            <div class="form-message"></div>
+                        </div>
+                    </form>
+                </div>
+                <!-------- Contact Form Ends ------->
+            </div>
+        </div>
     </section>
     <!------- Contact Section Ends ------->
     <!------- Footer Begins ------->
     <footer>
-
+        <div class="portfolio-container">
+            <div class="portfolio-row footer-wrap">
+                <div class="copyright-text">
+                    <p>© Copyright 2023 by <strong>CodzSword</strong></p>
+                </div>
+                <ul class="social-icons">
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </div>
+        </div>
     </footer>
     <!------- Footer Ends ------->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
