@@ -61,32 +61,41 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+
 /* ========== Dark And Light Mode Toggle ======== */
 
 .theme-toggle {
-    position: fixed;
-    top: 50%;
-    z-index: 10;
-    right: 0;
     border: none;
-    background-color: var(--color2);
+    background-color: var(--bg-color1);
 }
 
-body:not(.dark) .theme-toggle .lni-night,
-body.dark .theme-toggle .lni-sun {
+body:not(.dark) .theme-toggle .bx-moon,
+body.dark .theme-toggle .bx-sun {
     cursor: pointer;
-    color: var(--bg-color2);
+    color: #9f9e99;
     padding: 10px 10px;
     display: block;
+    animation: fade .5s;
     font-size: 1.25rem;
+    transition: all 0.4s;
 }
 
-body:not(.dark) .theme-toggle .lni-sun {
+body:not(.dark) .theme-toggle .bx-moon:hover {
+    color: #131212;
+}
+
+body.dark .theme-toggle .bx-sun:hover {
+    color: #FFF;
+}
+
+body:not(.dark) .theme-toggle .bx-sun {
+    animation: fade .5s;
     display: none;
 
 }
 
-body.dark .theme-toggle .lni-night {
+body.dark .theme-toggle .bx-moon {
+    animation: fade .5s;
     display: none;
 }
 
