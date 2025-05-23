@@ -75,7 +75,6 @@ body.dark .theme-toggle .bx-sun {
     color: #9f9e99;
     padding: 10px 10px;
     display: block;
-    animation: fade .5s;
     font-size: 1.25rem;
     transition: all 0.4s;
 }
@@ -89,13 +88,10 @@ body.dark .theme-toggle .bx-sun:hover {
 }
 
 body:not(.dark) .theme-toggle .bx-sun {
-    animation: fade .5s;
     display: none;
-
 }
 
 body.dark .theme-toggle .bx-moon {
-    animation: fade .5s;
     display: none;
 }
 
